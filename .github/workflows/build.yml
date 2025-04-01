@@ -1,4 +1,4 @@
-name: Build
+name: Build and Upload Artifact
 
 on:
   push:
@@ -34,3 +34,9 @@ jobs:
     - name: Run tests
       run: |
         meson test -C build
+
+    - name: Upload built artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: built-artifact
+        path: build/
