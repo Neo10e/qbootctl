@@ -6,17 +6,25 @@ This HAL was pulled from AOSP source code and bastardised to build and run on a 
 
 * zlib-dev
 * meson
+* ninja
 * cmake
 * linux-headers
 
-## Building
+## Building & Installing
 
 qbootctl uses the meson build system
 
 ```sh
-meson build
+git clone https://github.com/rmuxnet/qbootctl
+cd qbootctl
+meson setup build 
 meson compile -C build
+sudo ninja -C build install
 ```
+
+we need to install using ninja
+~~sudo meson install -C build~~
+installed with meson bricks device when used
 
 ## Usage
 
