@@ -22,8 +22,8 @@ meson compile -C build
 sudo ninja -C build install
 ```
 
-we need to install using ninja
-~~sudo meson install -C build~~
+we need to install using ninja 
+~~sudo meson install -C build~~ 
 installed with meson bricks device when used
 
 ## Usage
